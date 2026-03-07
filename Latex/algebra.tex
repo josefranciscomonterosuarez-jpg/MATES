@@ -1,0 +1,61 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{lastpage}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{tocloft}
+
+\titleformat{\bfseries\large\itshape}{\thechapter.\space}[2em]{}{}
+\titleformat{\bfseries\large\itshape}{\thesection.\space}[2em]{}{}
+\titleformat{\bfseries\large\itshape}{\thesubsection.\space}[2em]{}{}
+\titleformat{\bfseries\large\itshape}{\thesubsubsection.\space}[2em]{}{}
+\titleformat{\bfseries\large\itshape}{\theparagraph.\space}[2em]{}{}
+\titleformat{\bfseries\large\itshape}{\theparagraph.\space}[2em]{}{}
+\titleformat{\bfseries\large\itshape}{\thesubparagraph.\space}[2em]{}{}
+\titleformat{\bfseries\large\itshape}{\thesubparagraph.\space}[2em]{}{}
+
+\newcommand{\chapterprefix}{Chapter }
+\newcommand{\sectionprefix}{Section }
+\newcommand{\subsectionprefix}{Subsection }
+\newcommand{\subsubsectionprefix}{Subsubsection }
+\newcommand{\paragraphprefix}{Paragraph }
+\newcommand{\subparagraphprefix}{Subparagraph }
+
+\newcommand{\chaptername}[1]{\chapterprefix #1}
+\newcommand{\sectionname}[1]{\sectionprefix #1}
+\newcommand{\subsectionname}[1]{\subsectionprefix #1}
+\newcommand{\subsubsectionname}[1]{\subsubsectionprefix #1}
+\newcommand{\paragraphname}[1]{\paragraphprefix #1}
+\newcommand{\subparagraphname}[1]{\subparagraphprefix #1}
+
+\newcommand{\chaptertitle}[1]{\bfseries\large\itshape #1}
+\newcommand{\sectiontitle}[1]{\bfseries\large\itshape #1}
+\newcommand{\subsectiontitle}[1]{\bfseries\large\itshape #1}
+\newcommand{\subsubsectiontitle}[1]{\bfseries\large\itshape #1}
+\newcommand{\paragraphtitle}[1]{\bfseries\large\itshape #1}
+\newcommand{\subparagraphtitle}[1]{\bfseries\large\itshape #1}
+
+\newcommand{\chapternumber}[1]{\bfseries\large\itshape #1}
+\newcommand{\sectionnumber}[1]{\bfseries\large\itshape #1}
+\newcommand{\subsectionnumber}[1]{\bfseries\large\itshape #1}
+\newcommand{\subsubsectionnumber}[1]{\bfseries\large\itshape #1}
+\newcommand{\paragraphnumber}[1]{\bfseries\large\itshape #1}
+\newcommand{\subparagraphnumber}[1]{\bfseries\large\itshape #1}
+
+\pagestyle{fancyhdr}
+\fancyhead[C]{\bfseries\large\itshape \thepage/\pageref{LastPage}}
+\fancyhead[L]{\bfseries\large\itshape \leftmark}
+\fancyhead[R]{\bfseries\large\itshape \rightmark}
+\fancyfoot[C]{}
+
+\begin{document}
