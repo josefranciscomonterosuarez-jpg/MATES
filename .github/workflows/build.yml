@@ -1,0 +1,30 @@
+name: Compilar LaTeX a HTML
+
+on:
+  push:
+    paths:
+      - 'latex/*.tex'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Descargar repositorio
+      uses: actions/checkout@v3
+
+    - name: Instalar Pandoc
+      run: sudo apt-get install -y pandoc
+
+    - name: Convertir LaTeX a HTML
+      run: |
+        mkdir -p web/contenidos
+        pandoc latex/algebra.tex -s -o web/contenidos/algebra.html
+
+    - name: Subir cambios
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "actions@github.com"
+        git add .
+        git commit -m "Compilación automática"
+        git push
